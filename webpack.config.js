@@ -145,7 +145,7 @@ module.exports = (env, argv) =>{
                 patterns:[
                     { from: "./src/assets/images", to: "./assets/images" },
                     { from: "./src/assets/iconos", to: "./assets/iconos" },
-                    { from: "./src/assets/sounds", to: "./assets/sounds" },
+                    { from: "./src/assets/sounds", to: "./assets/" },
                     {
                         from: "node_modules/@fortawesome/fontawesome-free/webfonts/*.*",
                         to() {
