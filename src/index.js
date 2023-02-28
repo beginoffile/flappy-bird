@@ -1,5 +1,16 @@
 import './styles.css';
 
+if ('serviceWorker' in navigator){
+    window.addEventListener('load', () =>{
+        navigator.serviceWorker.register('./service-worker.js').then(registration =>{
+            console.log('SW registered', registration)
+        }).catch(registrationError =>{
+            console.log('Sw Registration failed', registrationError);
+        });
+    })
+}
+
+
 const canvas = document.getElementById('game-canvas');
 const ctx = canvas.getContext("2d");
 const titleGame = document.getElementById('title-game');
@@ -51,15 +62,6 @@ titleGame.innerHTML = 'Press to Start...';
 btnStart.innerHTML = 'Start';
 scoreDisplay.style.display='none';
 
-if ('serviceWorker' in navigator){
-    window.addEventListener('load', () =>{
-        navigator.serviceWorker.register('./service-worker.js').then(registration =>{
-            console.log('SW registered', registration)
-        }).catch(registrationError =>{
-            console.log('Sw Registration failed', registrationError);
-        });
-    })
-}
 
 // control the bird with the space key
 document.body.onkeyup = (e)=>{
