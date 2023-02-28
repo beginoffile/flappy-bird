@@ -106,16 +106,16 @@ module.exports = (env, argv) =>{
         plugins: [
 
             new WebpackPwaManifest({
-                name: 'Nombre de la App',
-                short_name: 'App',
-                description: 'App Template',
+                name: 'Flappy Bird',
+                short_name: 'Game',
+                description: 'Flappy Bird Game',
                 theme_color: '#8C54A4',
                 background_color: '#8C54A4',
                 display: 'standalone',
                 dir:'',
                 inject:true,
-                start_url: '/',
-                publicPath: '/',                
+                start_url: './',
+                publicPath: './',                
                 includeDirectory: false,
                 fingerprints: true,
                 crossorigin: null,                
@@ -259,16 +259,16 @@ module.exports = (env, argv) =>{
         plugins: [
 
             new WebpackPwaManifest({
-                name: 'Nombre de la App',
-                short_name: 'App',
-                description: 'App Template',
+                name: 'Flappy Bird',
+                short_name: 'Game',
+                description: 'Flappy Bird Game',
                 theme_color: '#8C54A4',
                 background_color: '#8C54A4',
                 display: 'standalone',
                 dir:'',
                 inject:true,
-                start_url: '/',
-                publicPath: '/',                
+                start_url: './',
+                publicPath: './',                
                 includeDirectory: false,
                 fingerprints: true,
                 crossorigin: null,                
