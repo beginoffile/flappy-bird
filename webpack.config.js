@@ -163,7 +163,11 @@ module.exports = (env, argv) =>{
                 ]
             }),
 
-           
+            new WorkboxPlugin.GenerateSW({
+                clientsClaim:true,
+                skipWaiting:true
+            }),
+ 
 
         ]
 
@@ -307,7 +311,13 @@ module.exports = (env, argv) =>{
                     },
                   
                 ]
-            })
+            }),
+ 
+            new WorkboxPlugin.GenerateSW({
+                clientsClaim:true,
+                skipWaiting:true
+            }),
+ 
             
         ]
     }
