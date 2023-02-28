@@ -5,7 +5,9 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-   
+const WorkboxPlugin = require('workbox-webpack-plugin');
+
+
 module.exports = (env, argv) =>{
     
     if (argv.mode === "development")
